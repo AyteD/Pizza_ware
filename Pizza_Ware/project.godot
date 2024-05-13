@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Pizza_Ware"
+run/main_scene="res://mouche.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
