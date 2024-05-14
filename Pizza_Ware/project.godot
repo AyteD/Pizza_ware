@@ -14,3 +14,7 @@ config/name="Pizza_Ware"
 run/main_scene="res://mouche.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+mouse_cursor/custom_image="res://Visuels/Sprite-0001.png"
