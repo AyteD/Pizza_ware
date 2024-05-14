@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6yd1oqywchrn"]
+[gd_scene load_steps=3 format=3 uid="uid://chowf8ctaicsr"]
 
-[ext_resource type="PackedScene" uid="uid://dcg86ftuc054u" path="res://mouche.tscn" id="1_qt8fu"]
+[ext_resource type="PackedScene" uid="uid://cpbxabbrpbuof" path="res://mouche.tscn" id="1_qt8fu"]
 [ext_resource type="Script" path="res://moucheMove.gd" id="2_fv0kp"]
 
 [node name="SoupeScene" type="Node2D"]
