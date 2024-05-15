@@ -34,13 +34,8 @@ func on_click():
 	print("Objet cliqué!")
 	motion.y = 1000
 	if motion.y == 1000 :
-		
+		await get_tree().create_timer(0.25).timeout
 		queue_free()
-		
-	
-func _on_timer_2_timeout():
-	
-	pass # Replace with function body.
 
 # Activer la détection des événements d'entrée
 func _ready():
