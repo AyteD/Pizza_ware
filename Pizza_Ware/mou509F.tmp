@@ -1,10 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckywbileoh4tu"]
+[gd_scene load_steps=7 format=3 uid="uid://ckywbileoh4tu"]
 
 [ext_resource type="Script" path="res://Scripts/mouche.gd" id="1_144sn"]
 [ext_resource type="Texture2D" uid="uid://bpo8kkfvytpqx" path="res://sprites/mouche_map.png" id="2_0f3o4"]
-[ext_resource type="Texture2D" uid="uid://d2s4rs26uc6ev" path="res://Visuels/Sprite-0001.png" id="3_334ad"]
-[ext_resource type="Script" path="res://Control.gd" id="3_o7wdc"]
-[ext_resource type="Script" path="res://Button.gd" id="3_xu2gj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxunh"]
 
@@ -47,21 +44,10 @@ autostart = true
 sprite_frames = SubResource("SpriteFrames_kojt2")
 speed_scale = 8.0
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_o7wdc")
-
-[node name="Button" type="Button" parent="Control"]
-offset_right = 398.0
-offset_bottom = 298.0
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
 action_mode = 0
-icon = ExtResource("3_334ad")
-script = ExtResource("3_xu2gj")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="focus_entered" from="Control" to="." method="_on_control_focus_entered"]
-[connection signal="button_down" from="Control/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

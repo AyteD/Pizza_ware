@@ -1,38 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://chowf8ctaicsr"]
+[gd_scene load_steps=4 format=3 uid="uid://chowf8ctaicsr"]
 
-[ext_resource type="Script" path="res://Scripts/Cursor.gd" id="1_6enks"]
 [ext_resource type="PackedScene" uid="uid://ckywbileoh4tu" path="res://mouche.tscn" id="1_qt8fu"]
-[ext_resource type="Texture2D" uid="uid://y02xs5858xr0" path="res://sprites/bol.png" id="3_nm4xy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrp7f"]
-size = Vector2(5, 20)
+[ext_resource type="PackedScene" uid="uid://bvunvxh8lppeo" path="res://bol.tscn" id="3_qllwr"]
+[ext_resource type="PackedScene" uid="uid://bldox5m7k4fhl" path="res://coliders.tscn" id="4_6pxyb"]
 
 [node name="SoupeScene" type="Node2D"]
-script = ExtResource("1_6enks")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
 [node name="mouche" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(464, 207)
+position = Vector2(574, 287)
 
 [node name="mouche2" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(286, 102)
+position = Vector2(284, 109)
 
 [node name="mouche3" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(512, 67)
+position = Vector2(795, 186)
 
-[node name="mouche4" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(879, 107)
+[node name="bol2" parent="." instance=ExtResource("3_qllwr")]
+position = Vector2(930, 525)
 
-[node name="mouche5" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(678, 156)
+[node name="bol3" parent="." instance=ExtResource("3_qllwr")]
+position = Vector2(177, 521)
 
-[node name="Bol" type="Sprite2D" parent="."]
-position = Vector2(874.331, 499.083)
-scale = Vector2(0.160313, 0.160313)
-texture = ExtResource("3_nm4xy")
+[node name="bol4" parent="." instance=ExtResource("3_qllwr")]
+position = Vector2(554, 522)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_wrp7f")
-one_way_collision_margin = 4.8
+[node name="Coliders" parent="." instance=ExtResource("4_6pxyb")]

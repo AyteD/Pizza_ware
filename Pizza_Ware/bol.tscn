@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvunvxh8lppeo"]
+
+[ext_resource type="Texture2D" uid="uid://y02xs5858xr0" path="res://sprites/bol.png" id="1_oanu4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e8y4"]
+size = Vector2(27.8052, 217)
+
+[node name="bol2" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23, 13.5)
+scale = Vector2(14.17, 1)
+shape = SubResource("RectangleShape2D_5e8y4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27.5, 14.3032)
+scale = Vector2(0.115805, 0.115805)
+texture = ExtResource("1_oanu4")
