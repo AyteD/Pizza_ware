@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://chowf8ctaicsr"]
+[gd_scene load_steps=6 format=3 uid="uid://chowf8ctaicsr"]
 
 [ext_resource type="PackedScene" uid="uid://ckywbileoh4tu" path="res://mouche.tscn" id="1_qt8fu"]
 [ext_resource type="PackedScene" uid="uid://bvunvxh8lppeo" path="res://bol.tscn" id="3_qllwr"]
 [ext_resource type="PackedScene" uid="uid://bldox5m7k4fhl" path="res://coliders.tscn" id="4_6pxyb"]
 [ext_resource type="PackedScene" uid="uid://d04wi0esmdf3q" path="res://back_ground.tscn" id="4_iedwo"]
 
+[sub_resource type="GDScript" id="GDScript_klloy"]
+script/source = "
+"
+
 [node name="SoupeScene" type="Node2D"]
+script = SubResource("GDScript_klloy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -16,7 +21,7 @@ zoom = Vector2(1.335, 1)
 [node name="Coliders" parent="." instance=ExtResource("4_6pxyb")]
 
 [node name="bol2" parent="." instance=ExtResource("3_qllwr")]
-position = Vector2(632, 525)
+position = Vector2(707, 527)
 
 [node name="bol3" parent="." instance=ExtResource("3_qllwr")]
 position = Vector2(176, 524)
@@ -25,19 +30,4 @@ position = Vector2(176, 524)
 position = Vector2(194, 157)
 input_pickable = true
 
-[node name="mouche2" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(321, 376)
-input_pickable = true
-
-[node name="mouche3" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(577, 165)
-input_pickable = true
-
-[node name="mouche4" parent="." instance=ExtResource("1_qt8fu")]
-position = Vector2(687, 292)
-input_pickable = true
-
 [connection signal="input_event" from="mouche" to="mouche" method="_on_input_event"]
-[connection signal="input_event" from="mouche2" to="mouche2" method="_on_input_event"]
-[connection signal="input_event" from="mouche3" to="mouche3" method="_on_input_event"]
-[connection signal="input_event" from="mouche4" to="mouche4" method="_on_input_event"]

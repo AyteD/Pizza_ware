@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckywbileoh4tu"]
+[gd_scene load_steps=8 format=3 uid="uid://ckywbileoh4tu"]
 
 [ext_resource type="Script" path="res://Scripts/mouche.gd" id="1_144sn"]
 [ext_resource type="Texture2D" uid="uid://bpo8kkfvytpqx" path="res://sprites/mouche_map.png" id="2_0f3o4"]
+[ext_resource type="Texture2D" uid="uid://d2s4rs26uc6ev" path="res://Visuels/Sprite-0001.png" id="3_334ad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxunh"]
 
@@ -24,7 +25,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 24.0
+"speed": 5.0
 }]
 
 [node name="mouche" type="CharacterBody2D"]
@@ -42,11 +43,23 @@ autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kojt2")
-autoplay = "default"
-frame_progress = 0.218624
 speed_scale = 8.0
 
-[node name="Timer2" type="Timer" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 398.0
+offset_bottom = 298.0
+action_mode = 0
+icon = ExtResource("3_334ad")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="draw" from="CollisionShape2D" to="." method="_on_collision_shape_2d_draw"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="focus_entered" from="Control" to="." method="_on_control_focus_entered"]
+[connection signal="button_down" from="Control/Button" to="." method="_on_button_button_down"]
