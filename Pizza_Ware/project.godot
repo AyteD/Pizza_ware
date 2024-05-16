@@ -15,6 +15,10 @@ run/main_scene="res://soupe_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Transition="*res://TRANSITION.gd"
+
 [display]
 
 mouse_cursor/custom_image="res://Visuels/Sprite-0001.png"
