@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c75fuhie75o4r"]
+
+[ext_resource type="Texture2D" uid="uid://di0iithcx255u" path="res://sprites/tache.png" id="1_nxhsv"]
+
+[node name="Tache" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 2.38419e-07)
+scale = Vector2(0.0667267, 0.081962)
+texture = ExtResource("1_nxhsv")

@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpwhc22drskhv"]
+
+[ext_resource type="PackedScene" uid="uid://d04wi0esmdf3q" path="res://Scene/back_ground.tscn" id="2_01to0"]
+[ext_resource type="Texture2D" uid="uid://bbs5ajowy72v7" path="res://sprites/pizza.png" id="4_1pehv"]
+[ext_resource type="PackedScene" uid="uid://do6gedbclrodn" path="res://Scene/ketchup.tscn" id="4_ul7cf"]
+[ext_resource type="Texture2D" uid="uid://cr6aqy5tqnxoq" path="res://sprites/fleche_doigt.png" id="5_66hv6"]
+[ext_resource type="PackedScene" uid="uid://c75fuhie75o4r" path="res://Scene/tache.tscn" id="5_aa5j0"]
+
+[node name="SauceScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="BackGround" parent="." instance=ExtResource("2_01to0")]
+
+[node name="Pizza" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(1.68685, 1.68685)
+texture = ExtResource("4_1pehv")
+
+[node name="FlecheDoigt" type="Sprite2D" parent="."]
+position = Vector2(707, 128)
+scale = Vector2(0.115366, 0.103804)
+texture = ExtResource("5_66hv6")
+
+[node name="FlecheDoigt2" type="Sprite2D" parent="."]
+position = Vector2(218, 128)
+scale = Vector2(0.115366, 0.103804)
+texture = ExtResource("5_66hv6")
+flip_h = true
+
+[node name="ketchup" parent="." instance=ExtResource("4_ul7cf")]
+tache = "res://sprites/tache.png"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(267, 365)
+gizmo_extents = 34.6
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(601, 395)
+gizmo_extents = 34.6
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(286.6, 461.6)
+gizmo_extents = 34.6
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(600.6, 461.6)
+gizmo_extents = 34.6
+
+[node name="Tache" parent="." instance=ExtResource("5_aa5j0")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

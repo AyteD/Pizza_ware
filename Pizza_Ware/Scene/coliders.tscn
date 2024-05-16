@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bldox5m7k4fhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddrx3"]
-size = Vector2(20, 680)
+size = Vector2(20, 655)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5kio"]
 size = Vector2(1484.54, 135.063)
@@ -16,7 +16,7 @@ scale = Vector2(8.12, 1)
 shape = SubResource("RectangleShape2D_ddrx3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(935, 323)
+position = Vector2(935, 323.5)
 scale = Vector2(8.12, 1)
 shape = SubResource("RectangleShape2D_ddrx3")
 

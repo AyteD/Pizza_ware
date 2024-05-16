@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciqsku25gc5xy"]
+
+[ext_resource type="Texture2D" uid="uid://bkt4gr770fr7x" path="res://sprites/transition_wall.png" id="1_qjneg"]
+[ext_resource type="Texture2D" uid="uid://c6ko6civsyqbp" path="res://sprites/sauceitup.png" id="2_xvyjn"]
+
+[node name="Sauce" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.6875, 1.6875)
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("1_qjneg")
+
+[node name="Sauce" type="Sprite2D" parent="."]
+position = Vector2(412.188, 293)
+scale = Vector2(1.33667, 1.36979)
+texture = ExtResource("2_xvyjn")

@@ -28,7 +28,6 @@ func _on_timer_timeout():
 
 
 
-
 # Fonction personnalisée pour gérer le clic
 func on_click():
 	print("Objet cliqué!")

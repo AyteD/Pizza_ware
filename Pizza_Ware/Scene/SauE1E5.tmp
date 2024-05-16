@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpwhc22drskhv"]
+
+[ext_resource type="Script" path="res://Scene/Sauce_scene.gd" id="1_a75tr"]
+[ext_resource type="PackedScene" uid="uid://d04wi0esmdf3q" path="res://Scene/back_ground.tscn" id="2_01to0"]
+[ext_resource type="Texture2D" uid="uid://gyws1t12o41o" path="res://sprites/ketchup.png" id="3_tpuwb"]
+[ext_resource type="Texture2D" uid="uid://bbs5ajowy72v7" path="res://sprites/pizza.png" id="4_1pehv"]
+[ext_resource type="Script" path="res://Scene/Ketchup.gd" id="4_nde46"]
+[ext_resource type="Texture2D" uid="uid://cr6aqy5tqnxoq" path="res://sprites/fleche_doigt.png" id="5_66hv6"]
+
+[node name="SauceScene" type="Node2D"]
+script = ExtResource("1_a75tr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="BackGround" parent="." instance=ExtResource("2_01to0")]
+
+[node name="Ketchup" type="Sprite2D" parent="."]
+position = Vector2(464, 145)
+scale = Vector2(0.132081, 0.132081)
+texture = ExtResource("3_tpuwb")
+script = ExtResource("4_nde46")
+
+[node name="Pizza" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(1.68685, 1.68685)
+texture = ExtResource("4_1pehv")
+
+[node name="FlecheDoigt" type="Sprite2D" parent="."]
+position = Vector2(707, 128)
+scale = Vector2(0.115366, 0.103804)
+texture = ExtResource("5_66hv6")
+
+[node name="FlecheDoigt2" type="Sprite2D" parent="."]
+position = Vector2(218, 128)
+scale = Vector2(0.115366, 0.103804)
+texture = ExtResource("5_66hv6")
+flip_h = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

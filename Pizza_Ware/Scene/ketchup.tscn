@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://do6gedbclrodn"]
+
+[ext_resource type="Script" path="res://Scripts/Sauce_scene.gd" id="1_dv4gi"]
+[ext_resource type="Texture2D" uid="uid://gyws1t12o41o" path="res://sprites/ketchup.png" id="2_ol2ot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxrmh"]
+size = Vector2(23.4343, 28.9603)
+
+[node name="ketchup" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_dv4gi")
+
+[node name="ketchup" type="CollisionShape2D" parent="."]
+position = Vector2(467.5, 141.5)
+scale = Vector2(9.772, 9.772)
+shape = SubResource("RectangleShape2D_pxrmh")
+
+[node name="Ketchup" type="Sprite2D" parent="."]
+position = Vector2(464, 145)
+scale = Vector2(0.132081, 0.132081)
+texture = ExtResource("2_ol2ot")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

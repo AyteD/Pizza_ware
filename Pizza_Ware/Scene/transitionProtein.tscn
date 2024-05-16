@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfyupvjuabhbt"]
+
+[ext_resource type="Texture2D" uid="uid://bkt4gr770fr7x" path="res://sprites/transition_wall.png" id="1_k4n6a"]
+[ext_resource type="Script" path="res://Scripts/TimerProtein.gd" id="1_o22ps"]
+[ext_resource type="Texture2D" uid="uid://ckdl53angog68" path="res://sprites/protein.png" id="2_ootyh"]
+
+[node name="Protein" type="Node2D"]
+script = ExtResource("1_o22ps")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.6875, 1.6875)
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("1_k4n6a")
+
+[node name="Protein" type="Sprite2D" parent="."]
+position = Vector2(415.442, 295.5)
+scale = Vector2(1.34938, 1.38281)
+texture = ExtResource("2_ootyh")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

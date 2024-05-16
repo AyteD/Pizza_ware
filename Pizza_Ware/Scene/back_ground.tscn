@@ -4,6 +4,10 @@
 
 [node name="BackGround" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(432, 324)
 scale = Vector2(1.6875, 1.6875)

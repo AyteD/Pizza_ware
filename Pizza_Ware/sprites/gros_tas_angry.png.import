@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di0iithcx255u"
-path="res://.godot/imported/tacheù.png-2b9097dcc99167dfdfb7a977ee02c440.ctex"
+uid="uid://cxqqj7utyvlpq"
+path="res://.godot/imported/gros_tas_angry.png-67c756bbad6ba8868bfc4e8236440938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tacheù.png"
-dest_files=["res://.godot/imported/tacheù.png-2b9097dcc99167dfdfb7a977ee02c440.ctex"]
+source_file="res://sprites/gros_tas_angry.png"
+dest_files=["res://.godot/imported/gros_tas_angry.png-67c756bbad6ba8868bfc4e8236440938.ctex"]
 
 [params]
 
