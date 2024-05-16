@@ -36,7 +36,7 @@ texture = ExtResource("5_66hv6")
 flip_h = true
 
 [node name="ketchup" parent="." instance=ExtResource("4_ul7cf")]
-tache = "res://sprites/tache.png"
+tache = "res://Scene/tache.tscn"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(267, 365)
