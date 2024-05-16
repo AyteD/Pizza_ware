@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://djpqmxq8iidpj"]
+
+[ext_resource type="Texture2D" uid="uid://by0k0nhr52k2x" path="res://sprites/lives_off.png" id="1_4oea5"]
+[ext_resource type="Script" path="res://Scripts/Vie1.gd" id="1_os3x1"]
+[ext_resource type="Texture2D" uid="uid://damrb13x87lka" path="res://sprites/lives.png" id="2_8oyww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2ofm"]
+atlas = ExtResource("2_8oyww")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3thga"]
+atlas = ExtResource("2_8oyww")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_132di"]
+atlas = ExtResource("2_8oyww")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_533h8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2ofm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3thga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_132di")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Vie1" type="Node2D"]
+script = ExtResource("1_os3x1")
+
+[node name="LivesOff" type="Sprite2D" parent="."]
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("1_4oea5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_533h8")
+autoplay = "default"
+frame_progress = 0.236535

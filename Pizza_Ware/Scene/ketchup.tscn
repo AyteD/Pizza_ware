@@ -9,6 +9,7 @@ size = Vector2(23.4343, 28.9603)
 [node name="ketchup" type="StaticBody2D"]
 input_pickable = true
 script = ExtResource("1_dv4gi")
+tache = "res://Scene/tache.tscn"
 
 [node name="ketchup" type="CollisionShape2D" parent="."]
 position = Vector2(467.5, 141.5)

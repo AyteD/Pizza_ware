@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1f4xgrbpppru"]
+[gd_scene load_steps=11 format=3 uid="uid://b1f4xgrbpppru"]
 
 [ext_resource type="Texture2D" uid="uid://c8mfinugpwr5g" path="res://sprites/cuisine.png" id="1_hsns2"]
 [ext_resource type="Script" path="res://Scripts/TimerVictoir.gd" id="1_jwbo3"]
 [ext_resource type="Texture2D" uid="uid://b2xf70oi7fikk" path="res://sprites/gros_tas_happy.png" id="2_h3x8f"]
 [ext_resource type="Texture2D" uid="uid://dlqxfbd7opf62" path="res://sprites/comptoir.png" id="3_wnf5g"]
+[ext_resource type="PackedScene" uid="uid://djpqmxq8iidpj" path="res://Scene/Vie1.tscn" id="5_6yp48"]
+[ext_resource type="PackedScene" uid="uid://0fusoxk2npcs" path="res://Scene/Vie2.tscn" id="6_5okjv"]
+[ext_resource type="PackedScene" uid="uid://cky3gsfpl42cl" path="res://Scene/Vie3.tscn" id="7_l6jwm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tcde"]
 atlas = ExtResource("2_h3x8f")
@@ -44,7 +47,7 @@ position = Vector2(397, 289)
 scale = Vector2(2.675, 2.675)
 sprite_frames = SubResource("SpriteFrames_ae0hr")
 autoplay = "default"
-frame_progress = 0.510906
+frame_progress = 0.684454
 speed_scale = 0.885
 
 [node name="Comptoire" type="Sprite2D" parent="."]
@@ -55,5 +58,14 @@ texture = ExtResource("3_wnf5g")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="Vie1" parent="." instance=ExtResource("5_6yp48")]
+position = Vector2(76, 76)
+
+[node name="Vie2" parent="." instance=ExtResource("6_5okjv")]
+position = Vector2(76, 174)
+
+[node name="Vie3" parent="." instance=ExtResource("7_l6jwm")]
+position = Vector2(76, 276)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

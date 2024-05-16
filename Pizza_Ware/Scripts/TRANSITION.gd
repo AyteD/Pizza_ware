@@ -22,3 +22,9 @@ func change_scene(load):
 			get_tree().change_scene_to_file("res://Scene/transitionSauce.tscn")
 		6:
 			get_tree().change_scene_to_file("res://Scene/Sauce_scene.tscn")
+
+func _process(delta):
+	
+	if vie <= 0:
+		get_tree().change_scene_to_file("res://Scene/game_over.tscn")
+	

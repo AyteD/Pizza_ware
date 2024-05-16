@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b33uciytnaf0j"]
+
+[ext_resource type="Texture2D" uid="uid://b41jpbfwetb3u" path="res://sprites/game_over.png" id="1_7rryt"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("1_7rryt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.335, 1)
