@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cky3gsfpl42cl"]
 
-[ext_resource type="Script" path="res://Scene/Vie3.gd" id="1_55yqp"]
+[ext_resource type="Script" path="res://Scripts/Vie3.gd" id="1_55yqp"]
 [ext_resource type="Texture2D" uid="uid://by0k0nhr52k2x" path="res://sprites/lives_off.png" id="1_165up"]
 [ext_resource type="Texture2D" uid="uid://damrb13x87lka" path="res://sprites/lives.png" id="1_cc4gx"]
 

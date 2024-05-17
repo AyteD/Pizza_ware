@@ -1,9 +1,60 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpwhc22drskhv"]
+[gd_scene load_steps=13 format=3 uid="uid://dpwhc22drskhv"]
 
 [ext_resource type="PackedScene" uid="uid://d04wi0esmdf3q" path="res://Scene/back_ground.tscn" id="2_01to0"]
 [ext_resource type="Texture2D" uid="uid://bbs5ajowy72v7" path="res://sprites/pizza.png" id="4_1pehv"]
 [ext_resource type="PackedScene" uid="uid://do6gedbclrodn" path="res://Scene/ketchup.tscn" id="4_ul7cf"]
 [ext_resource type="Texture2D" uid="uid://cr6aqy5tqnxoq" path="res://sprites/fleche_doigt.png" id="5_66hv6"]
+[ext_resource type="Texture2D" uid="uid://doipu8b7axrfv" path="res://sprites/chrono.png" id="5_qrs80"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4a3h"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(0, 0, 878, 850)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r1x0"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(878, 0, 878, 850)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qey5y"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(1756, 0, 878, 850)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yteqx"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(2634, 0, 878, 850)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3kxu"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(3512, 0, 878, 850)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js8j5"]
+atlas = ExtResource("5_qrs80")
+region = Rect2(4390, 0, 878, 850)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnx4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4a3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r1x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qey5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yteqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3kxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js8j5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.2
+}]
 
 [node name="SauceScene" type="Node2D"]
 
@@ -24,12 +75,12 @@ scale = Vector2(1.68685, 1.68685)
 texture = ExtResource("4_1pehv")
 
 [node name="FlecheDoigt" type="Sprite2D" parent="."]
-position = Vector2(707, 128)
+position = Vector2(707, 188)
 scale = Vector2(0.115366, 0.103804)
 texture = ExtResource("5_66hv6")
 
 [node name="FlecheDoigt2" type="Sprite2D" parent="."]
-position = Vector2(218, 128)
+position = Vector2(218, 176)
 scale = Vector2(0.115366, 0.103804)
 texture = ExtResource("5_66hv6")
 flip_h = true
@@ -51,5 +102,11 @@ gizmo_extents = 34.6
 [node name="Marker2D4" type="Marker2D" parent="."]
 position = Vector2(600.6, 461.6)
 gizmo_extents = 34.6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(769, 77)
+scale = Vector2(0.157647, 0.157647)
+sprite_frames = SubResource("SpriteFrames_fnx4x")
+autoplay = "default"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
