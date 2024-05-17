@@ -17,12 +17,13 @@ func gen_random_pos():
 	instance.position = Vector2(x1,y1)
 
 func _process(delta):
-	if sauce >= 15:
+	if sauce >= 20:
 		Transition.change_scene(1)
 		on_click()
 
 func on_click():
 	sauce += 1
+	$"../AudioStreamPlayer2D".play()
 	print(sauce)
 	gen_random_pos()
 

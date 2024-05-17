@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkx01fsv6ighf"
+path="res://.godot/imported/KETCHUP BOTTLE.mp3-27f3334d8ae994093caf1481f18ed2ee.mp3str"
+
+[deps]
+
+source_file="res://SD/KETCHUP BOTTLE.mp3"
+dest_files=["res://.godot/imported/KETCHUP BOTTLE.mp3-27f3334d8ae994093caf1481f18ed2ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

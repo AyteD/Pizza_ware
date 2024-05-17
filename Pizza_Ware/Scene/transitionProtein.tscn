@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfyupvjuabhbt"]
+[gd_scene load_steps=5 format=3 uid="uid://cfyupvjuabhbt"]
 
 [ext_resource type="Texture2D" uid="uid://bkt4gr770fr7x" path="res://sprites/transition_wall.png" id="1_k4n6a"]
 [ext_resource type="Script" path="res://Scripts/TimerProtein.gd" id="1_o22ps"]
 [ext_resource type="Texture2D" uid="uid://ckdl53angog68" path="res://sprites/protein.png" id="2_ootyh"]
+[ext_resource type="AudioStream" uid="uid://6pgqgajxs1uj" path="res://SD/ADD SOME PROTEIN.wav" id="4_5jy8y"]
 
 [node name="Protein" type="Node2D"]
 script = ExtResource("1_o22ps")
@@ -25,5 +26,10 @@ texture = ExtResource("2_ootyh")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5jy8y")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

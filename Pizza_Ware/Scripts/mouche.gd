@@ -31,11 +31,12 @@ func _on_timer_timeout():
 # Fonction personnalisée pour gérer le clic
 func on_click():
 	print("Objet cliqué!")
+	$AudioStreamPlayer2D.play()
 	motion.y = 1000
 	if motion.y == 1000 :
 		await get_tree().create_timer(0.25).timeout
 		queue_free()
-
+		
 # Activer la détection des événements d'entrée
 func _ready():
 	set_process_input(true)

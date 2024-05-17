@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b34sugh4sb7hj"
+path="res://.godot/imported/KETCHUP BOTTLE.wav-a17ab7fd9c1325fb244ca04134900441.sample"
+
+[deps]
+
+source_file="res://SD/KETCHUP BOTTLE.wav"
+dest_files=["res://.godot/imported/KETCHUP BOTTLE.wav-a17ab7fd9c1325fb244ca04134900441.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
